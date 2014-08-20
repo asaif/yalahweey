@@ -56,7 +56,7 @@ func BindState(status string) (message string) {
 func main() {
 	Notify(BindState(FetchState()))
 	for _ = range time.Tick(15 * time.Minute) {
-		Notify(FetchState())
+		Notify(BindState(FetchState()))
 
 	}
 }
