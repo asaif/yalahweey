@@ -22,5 +22,8 @@ Just double click yalahweey at your home folder, and it will update you every 15
 
 Supported Systems:
 ===========
-Currently only Linux with gnome desktop, windows is on it's way; KDE support will be add soon.
-If you have enough time and can help with windows or KDE, fork and send me a PR
+#Linux :
+* KDE
+* Gnome
+#Windows:
+If you have enough time and can help with windows, fork and send me a PR
