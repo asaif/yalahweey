@@ -14,7 +14,7 @@ Get the ICON
      test -d ~/.icons || mkdir ~/.icons && wget --no-check-certificate -O ~/.icons/yalahweey.png https://raw.githubusercontent.com/asaif/yalahweey/master/icon/yalahweey.png
 Get the Binary
 
-    wget --no-check-certificate -O ~/yalahweey https://github.com/asaif/yalahweey/releases/download/0.0.1/yalahweey && chmod +x ~/yalahweey
+    wget --no-check-certificate -O ~/yalahweey https://github.com/asaif/yalahweey/releases/download/0.0.2/yalahweey && chmod +x ~/yalahweey
 
 How to use it ?
 ==============
