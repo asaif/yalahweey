@@ -4,9 +4,10 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"net/http"
-	"os/exec"
 	"os/user"
 	"time"
+
+	"github.com/guelfey/go.dbus"
 )
 
 type PowerGrid struct {
@@ -14,10 +15,27 @@ type PowerGrid struct {
 }
 
 func Notify(status string) {
-	usr, _ := user.Current()
-	icon := usr.HomeDir + "/.icons/yalahweey.png"
-	n := exec.Command("notify-send", "-i", icon, "Yalahweey", status)
-	n.Run()
+	var (
+		usr, _ = user.Current()
+		icon   = usr.HomeDir + "/.icons/yalahweey.png"
+		app    = "Yalahweey"
+		text   = status
+		title  = "Yalahweey"
+		dst    = "org.freedesktop.Notifications"
+		path   = "/org/freedesktop/Notifications"
+		method = "org.freedesktop.Notifications.Notify"
+		sound  = "/usr/share/sounds/freedesktop/stereo/message.oga"
+		hint   = map[string]dbus.Variant{
+			"sound-file": dbus.MakeVariant(sound)}
+	)
+
+	conn, err := dbus.SessionBus()
+	HandleError(err)
+	obj := conn.Object(dst, dbus.ObjectPath(path))
+	call := obj.Call(method, 0, app, uint32(0),
+		icon, title, text, []string{},
+		hint, int32(5000))
+	HandleError(call.Err)
 }
 
 func HandleError(err error) {
