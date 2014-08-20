@@ -25,5 +25,6 @@ Supported Systems:
 #Linux :
 * KDE
 * Gnome
+
 #Windows:
 If you have enough time and can help with windows, fork and send me a PR
