@@ -6,6 +6,17 @@ The tool will notify you regarding the state of the power gird once it start, th
 
 Yalahweey: is an Egyption word, we use to say when we hear bad news;
  and as we are heading to dark ages beacuse of our power grid current state I felt it's the best name for the tool
+
+ScreenShoots:
+=============
+* Gnome3
+(http://i.imgur.com/uzPJDIC.png)
+
+* KDE
+(http://i.imgur.com/spp6N9k.jpg)
+
+* Unity
+(http://i.imgur.com/irL90lC.png)
  
 Installation Steps:
 ============
@@ -22,9 +33,9 @@ Just double click yalahweey at your home folder, and it will update you every 15
 
 Supported Systems:
 ===========
-#Linux :
+**Linux :
 * KDE
 * Gnome
 
-#Windows:
+**Windows :
 If you have enough time and can help with windows, fork and send me a PR
