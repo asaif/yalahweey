@@ -39,6 +39,7 @@ Supported Systems:
 **Linux :**
 * KDE
 * Gnome
+* Unity
 
 **Windows :**
 
