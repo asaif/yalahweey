@@ -45,7 +45,7 @@ func HandleError(err error) {
 }
 
 func FetchState() (status string) {
-	url := "http://power-grid-status.mos3abof.com/status"
+	url := "http://www.gridstatusnow.com/status"
 	res, err := http.Get(url)
 	HandleError(err)
 	defer res.Body.Close()
